@@ -1,0 +1,15 @@
+{
+  "name": "simple_spider_demo",
+  "version": "1.0.0",
+  "description": "a simple spider demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Izumo Riki",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "superagent": "^1.8.1"
+  }
+}
