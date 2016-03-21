@@ -6,4 +6,4 @@ A Demo Spider using node.js
 `$ npm start`
 
 # result
-the result of spider will store in `data-utf8.csv`, encoding with UTF-8.
+the result will be stored in `data-utf8.csv`, encoding with UTF-8.
