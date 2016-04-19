@@ -1,7 +1,7 @@
 require('mongoose').connect('mongodb://localhost/spider');
 // spiders
-var air = require('./spider/air');
-var weather = require('./spider/weather');
+var air = require('./spiders/air');
+var weather = require('./spiders/weather');
 
 var period = 1 * 60 * 60 * 1000;
 

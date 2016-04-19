@@ -16,7 +16,7 @@ var alias = {
 
 
 module.exports = function() {
-    SG.get(target.weather)
+    SG.get(url)
         .set('Accept', 'application/json')
         .end(function(err, res) {
             if (err) {
