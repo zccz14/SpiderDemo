@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "cheerio": "^0.20.0",
+    "mongoose": "^4.4.12",
     "superagent": "^1.8.1"
   }
 }
