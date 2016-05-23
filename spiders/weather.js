@@ -33,7 +33,9 @@ module.exports = function() {
                         humi: data[key].humi[11], // 相对湿度
                         rain: data[key].rain[11], // 降雨
                         windd: data[key].windd[11], // 风向
-                        windv: data[key].windv[11]// 风力
+                        windv: data[key].windv[11],// 风力
+                        pressure: data[key].pressure[11], // 气压
+                        visi: data[key].visi[11], // 可见度
                     }).save(function(err, weather) {
                         if (err) {
                             console.log('error', err);

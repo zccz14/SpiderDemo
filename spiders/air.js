@@ -6,6 +6,7 @@ var url = 'http://www.pm25.com/ningbo.html';
 
 module.exports = function() {
     SG.get(url).end(function(err, res) {
+	if(err) return;
         var date = new Date();
         date.setMinutes(0, 0, 0);
         var $ = CIO.load(res.text);

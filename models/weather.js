@@ -8,4 +8,6 @@ module.exports = mongoose.model('weather', new Schema({
     rain: Number, // 降雨
     windd: String, // 风向
     windv: Number, // 风速等级
+    pressure: Number, //压力
+    visi: Number, //可见度
 }));
