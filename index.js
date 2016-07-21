@@ -13,10 +13,10 @@ function get() {
     console.log('log', new Date());
     air();
     weather();
-    road();
 }
 // first get
 get();
+road();
 // get every period
 setInterval(get, period);
-
+setInterval(road, 10 * 60 * 1000);

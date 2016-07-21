@@ -3,7 +3,7 @@ var CIO = require('cheerio');
 
 var Road = require('../models/road');
 var url = [];
-for (var i = 1; i <= 18; i++) url.push('http://sztocc.sztb.gov.cn/roadcongmore.aspx?page=' + i);
+for (var i = 1; i <= 18; i++) url.push('http://szmap.sutpc.com/roadcongmore.aspx?page=' + i);
 
 module.exports = function () {
     url.forEach(function (url) {
@@ -13,7 +13,7 @@ module.exports = function () {
                 return;
             }
             var date = new Date();
-            date.setMinutes(0, 0, 0);
+            date.setSeconds(0, 0);
             var $ = CIO.load(res.text);
             var list = $('td').map(function (i, e) {
                 return $(e).text().trim();
@@ -23,7 +23,7 @@ module.exports = function () {
                 var item = list.splice(0, 4);
                 var arr = item[0].split(' ');
                 new Road({
-                    date: date,
+                    date: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`,
                     name: arr[0],
                     direction: arr[1],
                     traffic: item[1],
